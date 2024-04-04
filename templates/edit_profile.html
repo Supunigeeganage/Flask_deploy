@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Edit Profile</h1>
+    <form method="POST" action="{{ url_for('edit_profile') }}">
+        {{ form.hidden_tag() }} <!-- Include CSRF token -->
+        <div>
+            {{ form.username.label }} <br>
+            {{ form.username(size=32) }} <!-- You can adjust the size as needed -->
+        </div>
+        <div>
+            {{ form.about_me.label }} <br>
+            {{ form.about_me(rows=5, cols=50) }} <!-- Adjust rows and cols as needed -->
+        </div>
+        <div>
+            <input type="submit" value="Save Changes">
+        </div>
+    </form>
+{% endblock %}
