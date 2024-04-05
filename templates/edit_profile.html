@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Edit Profile</h1>
     <form method="POST" action="{{ url_for('edit_profile') }}">
-        {{ form.hidden_tag() }} <!-- Include CSRF token -->
+        {{ form.hidden_tag() }} 
         <div>
             {{ form.username.label }} <br>
             {{ form.username(size=32) }} 
