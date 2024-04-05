@@ -6,11 +6,11 @@
         {{ form.hidden_tag() }} <!-- Include CSRF token -->
         <div>
             {{ form.username.label }} <br>
-            {{ form.username(size=32) }} <!-- You can adjust the size as needed -->
+            {{ form.username(size=32) }} 
         </div>
         <div>
             {{ form.about_me.label }} <br>
-            {{ form.about_me(rows=5, cols=50) }} <!-- Adjust rows and cols as needed -->
+            {{ form.about_me(rows=5, cols=50) }} 
         </div>
         <div>
             <input type="submit" value="Save Changes">
